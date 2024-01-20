@@ -17,11 +17,15 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(Path, routes);
-
+// const PORT = 3005;
 
 // database connection
 mongoose.connect(dbURI)
-.then(console.log('mongo connected'))
+.then(() => {
+    // app.listen(PORT, () => {
+    //     console.log(`Server is running on http://localhost:${PORT}`);
+    //   });
+    console.log('mongo connected')})
 .catch((err) => console.log(err))
 
 

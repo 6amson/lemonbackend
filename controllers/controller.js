@@ -1,7 +1,7 @@
-const RiskObject = require('../schemas/schema')
+const RiskObject = require('../schemas/schema');
 
-module.exports.signup_post = async (req, res) => {
-    const { riskScore, riskOptions } = req.body;
+module.exports.signup_post = async () => {
+    // const { riskScore, riskOptions } = req.body;
     res.send({
         "email": "damolele@yahoo.com",
         "password": "extrovert"
