@@ -7,7 +7,8 @@ const riskObjectSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    riskOptions: {
+    riskOptions:
+     {
         nigerianStock: {
             type: Number,
             required: true,

@@ -3,7 +3,7 @@ const authController = require('../controllers/controller')
 
 const router = Router();
 
-router.get('/updaterisk', authController.signup_post);
-// router.get('/', authController.test_get)
+router.post('/updaterisk', authController.updaterisk);
+router.get('/getrisk', authController.getrisk)
 
 module.exports = router;
