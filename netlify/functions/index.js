@@ -3,11 +3,15 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("../../routes/route");
 const serverless = require('serverless-http');
+const { config } = require('dotenv');
 
+
+config();
+
+const dbURI = process.env.dbURI;
 
 const app = express();
 const Path = '/.netlify/functions/index';
-const dbURI = "mongodb+srv://bunmigrey:bunmiGrey@cluster1.pf8gmhg.mongodb.net/Lemon";
 
 // middleware
 app.use(cors());
@@ -21,7 +25,7 @@ app.use(Path, routes);
 // database connection
 mongoose.connect(dbURI)
 .then(() => {
-    console.log('mongo connected')})
+    console.log('mongo connected', dbURI)})
 .catch((err) => console.log(err))
 
 
