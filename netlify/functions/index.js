@@ -25,7 +25,7 @@ app.use(Path, routes);
 // database connection
 mongoose.connect(dbURI)
 .then(() => {
-    console.log('mongo connected', dbURI)})
+    console.log('mongo connected')})
 .catch((err) => console.log(err))
 
 
